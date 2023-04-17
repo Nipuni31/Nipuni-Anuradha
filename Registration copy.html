@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="Registration" href="Registration.js">
+    <link rel="stylesheet" href="registration.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="Registration.js"></script> -->
+    <!-- <style>
+       #school {
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        max-width: 50%;
+      }
+    </style>   -->
+    <script type="text/javascript">
+                function validateForm(){
+                  var user=document.getElementById("username").value;
+                  var pass=document.getElementById("password").value;
+                  var name=document.getElementById("name").value;
+                  var address=document.getElementById("address").value;
+                  var country=document.getElementById("country").value;
+                  var zipcode=document.getElementById("zipcode").value;
+                  var email=document.getElementById("email").value;
+                  var gender=document.getElementById("gender").value;
+                  var language=document.getElementById("language").value;
+                  var about=document.getElementById("about").value;
+
+                  if(user==""){
+                    document.getElementById("usernameid").innerHTML="*User id is required";
+                    user.focus();
+                    // return false;
+                  }
+                  if((user.length<5)||(user.length>12)){
+                    document.getElementById("usernameid").innerHTML="*invalid User Id";
+                    user.focus();
+                    // return false;
+                  }
+                  if(pass==""){
+                    document.getElementById("passwordid").innerHTML="*password is required !";
+                    pass.focus();
+                    // return false;
+                  }
+                  if((pass.length<7)||(user.length>12)){
+                    document.getElementById("usernameid").innerHTML="*invalid password !";
+                    pass.focus();
+                    // return false;
+                  }
+                  if(name==""){
+                    document.getElementById("nameid").innerHTML="*Enter your name";
+                    name.focus();
+                    // return false;
+                  }
+                  if(address==""){
+                    document.getElementById("addressid").innerHTML="*required !";
+                    address.focus();
+                    // return false;
+                  }
+                  if(country==""){
+                    document.getElementById("countryid").innerHTML="*required !";
+                    country.focus();
+                    // return false;
+                  }
+                  if(zipcode==""){
+                    document.getElementById("zipcodeid").innerHTML="*required !";
+                    zipcode.focus();
+                    // return false;
+                  }
+                  if(email==""){
+                    document.getElementById("emailid").innerHTML="*required !";
+                    email.focus();
+                    // return false;
+                  }
+                  if(email.indexOf("@")<=0){
+                    document.getElementById("emailid").innerHTML="*Please enter a valid email address.";
+                    email.focus();
+                    // return false;
+                  }
+                  if(gender==""){
+                    document.getElementById("genderid").innerHTML="*required !";
+                    gender.focus();
+                    // return false;
+                  }
+                  if(language==""){
+                    document.getElementById("languageid").innerHTML="*required !";
+                    language.focus();
+                    // return false;
+                  }
+                  if(about==""){
+                    document.getElementById("aboutid").innerHTML="*required !";
+                    about.focus();
+                    // return false;
+                  }
+                  // return true;
+                }
+             </script>
+  </head>
+  <body>
+    <header>
+      <center><h1>Welcome to the college of Princes.</h1></center>
+    </header>
+    <nav>
+      <ul>
+        <li><img src="logo.png" style="height: 100px; width: 100px;"></li>
+        <li><a href="home.html"><img src="home.png">Home</a></li>
+        <li><a href="Registration copy.html"><img src="register.png">Registration Form</a></li>
+        <li><a href="login.html"><img src="login.png">Login</a></li>
+        <li><a href="about.html"><img src="about.png">About</a></li>
+        <li><a href="#"><img src="logout.png">Log out</a></li>
+      </ul>
+    </nav>
+    <!-- <main>
+            <body> -->
+              <center>
+            <!-- <form name="form" onsubmit="return validateForm()" method="post"> -->
+              <h3 align=center>Registration Form </h1>
+              <div class="form1">
+                User Id :<input type="text" id="username"><br><br>
+                <span id="usernameid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Password :<input type="password" id="password"><br><br>
+                <span id="passwordid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Name :<input type="text" id="name"><br><br>
+                <span id="nameid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Address :<textarea rows="1" cols="30" id="address"></textarea><br><br>
+                <span id="addressid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                country :<select id="country">
+                  <option value="Srilanka" selected>Sri lanka</option>
+                  <option value="canada">Canada</option>
+                  <option value="India">India</option>
+                  <option value="Australia">Australia</option>
+                </select><br><br>
+                <span id="countryid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Zip code :<input type="password" id="zipcode"><br><br>
+                <span id="zipcodeid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Email :<input type="text" id="email"><br><br>
+                <span id="emailid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Gender :<input type="radio" id="gender" value="M">Male<input type="radio" id="gender" value="F">Female<br><br>
+                <span id="genderid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                Language :<input type="checkbox" id="language" value="eng">English<input type="checkbox" id="language" value="neng">Non English<br><br>
+                <span id="languageid" class="text-danger"></span>
+              </div>
+              <div class="form1">
+                About :<textarea rows="3" cols="30" id="about"></textarea><br><br>
+                <span id="aboutid" class="text-danger"></span>
+              </div>
+              <!-- <input type="submit" id="submit" value="Register"> -->
+              <button onclick="validateForm();">Register</button>
+            <!-- </form> -->
+          </center>
+            
+    <!-- </main> -->
+    <br>
+
+    <footer>
+      <center><p>&copy; 2023 princes college. All rights reserved.</p></center>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.contact{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(112, 167, 222, 0.5);
+    height: 100px;
+    width: 500px;
+    margin-top: 10px;
+}
+.contact li{
+    display: inline;
+    margin-right: 50px;
+ 
+}
